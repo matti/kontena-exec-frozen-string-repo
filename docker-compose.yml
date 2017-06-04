@@ -1,0 +1,13 @@
+version: '2.1'
+
+services:
+  app:
+    image: mattipaksula/kontena-exec-frozen-string-repo
+    build:
+      context: .
+      args:
+        KONTENA_GEM_VERSION: ${KONTENA_GEM_VERSION}
+    environment:
+      - KONTENA_URL=${KONTENA_URL}
+      - KONTENA_TOKEN=${KONTENA_TOKEN}
+      - KONTENA_GRID=${KONTENA_GRID}
